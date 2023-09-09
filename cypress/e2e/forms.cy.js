@@ -10,7 +10,7 @@ describe("Bookstore Demos Testing",()=>{
         cy.wait(1000);
         cy.get("#userEmail").type("saskiii_8900@gmail.com");
         cy.wait(1000);
-        cy.contains("Male").check();
+        cy.get('[id="gender-radio-1"][type="radio"]').check("Male");
         cy.wait(1000);
         cy.get("#userNumber").type("085236789023");
         cy.wait(1000);
@@ -21,10 +21,10 @@ describe("Bookstore Demos Testing",()=>{
         cy.get("#dateOfBirthInput").should("have.value","8 Sep 2000");
         cy.get('.subjects-auto-complete__value-container').type("Proposing");
         cy.wait(1000);
-        cy.contains("Sports").check();
+        cy.get('[id="hobbies-checkbox-1"][type="checkbox"]').check("1");
         cy.wait(1000);
-        cy.get("#uploadPictures").click();
-        cy.wait(1000);
+        cy.get('[id="#uploadPicture"][type="file"]').selectFile("kiya.jpg",{action:'drag-drop'});
+        cy.wait(1000)
         cy.get("#currentAddress").type("Jl. Brigjen Katamso 1 No. 27, Waru, Sidoarjo, Jawa Timur");
         cy.wait(1000);
         cy.get('select[id="state"]').select("NCR").should("have.value","NCR");
