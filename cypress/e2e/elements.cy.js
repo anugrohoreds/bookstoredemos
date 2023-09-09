@@ -1,4 +1,4 @@
-describe("Web Testing Demos of Elements",()=>{
+describe("Bookstore Demos Setting",()=>{
 
     it("Textbox",()=>{
         cy.visit("https://demoqa.com")
